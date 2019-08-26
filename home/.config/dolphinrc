@@ -1,0 +1,45 @@
+[CompactMode]
+FontWeight=50
+
+[DetailsMode]
+FontWeight=50
+PreviewSize=32
+
+[General]
+LockPanels=false
+ShowSelectionToggle=false
+ShowSpaceInfo=false
+ShowZoomSlider=false
+SortingChoice=CaseSensitiveSorting
+UseTabForSwitchingSplitView=true
+Version=200
+ViewPropsTimestamp=2018,12,30,14,59,10
+
+[IconsMode]
+FontWeight=50
+PreviewSize=224
+
+[KPropertiesDialog]
+Height 1080=490
+Width 1920=450
+
+[MainWindow]
+Height 1080=962
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC0AAAB4PwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAABMA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawAAAAAUAAAB4AAAABMA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAEwD///8AAAADAAAD2AAAAMf8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAD2AAAACkA////AAACBgAAAqQAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1920=544
+
+[Open-with settings]
+CompletionMode=1
+History=
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsimagethumbnail,svgthumbnail
+
+[Search]
+What=Content
+
+[SettingsDialog]
+Height 1080=450
+Width 1920=568
