@@ -1,0 +1,12 @@
+[General]
+TerminalApplication=alacritty
+
+[KDE]
+ShowDeleteCommand=false
+SingleClick=true
+
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
+[PreviewSettings]
+MaximumRemoteSize=0
