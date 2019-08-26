@@ -1,0 +1,6 @@
+[user]
+	email = josh.shone@gmail.com
+	name = Josh Shone
+[core]
+	editor = vim
+	excludesfile = /home/josh/.config/.gitignore
