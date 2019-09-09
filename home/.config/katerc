@@ -12,7 +12,7 @@ Show Full Path in Title=false
 Show Menu Bar=false
 Show Status Bar=false
 Show Tab Bar=false
-Startup Session=manual
+Startup Session=new
 
 [KTextEditor Document]
 Allow End of Line Detection=true
@@ -25,7 +25,7 @@ Encoding=UTF-8
 End of Line=0
 Indent On Backspace=true
 Indent On Tab=true
-Indent On Text Paste=false
+Indent On Text Paste=true
 Indentation Mode=normal
 Indentation Width=2
 Keep Extra Spaces=false
@@ -36,7 +36,7 @@ Overwrite Mode=false
 PageUp/PageDown Moves Cursor=false
 Remove Spaces=0
 ReplaceTabsDyn=true
-Show Spaces=0
+Show Spaces=1
 Show Tabs=true
 Smart Home=true
 Swap Directory=
@@ -94,7 +94,7 @@ Show Line Count=false
 Show Scrollbars=1
 Show Word Count=false
 Smart Copy Cut=false
-Text Drag And Drop=true
+Text Drag And Drop=false
 User Sets Of Chars To Enclose Selection=
 Vi Input Mode Steal Keys=false
 Vi Relative Line Numbers=false
@@ -104,14 +104,14 @@ Word Completion Remove Tail=true
 
 [KTextEditor::Search]
 Replace History=jsSymbols,9rem,.dataset.id
-Search History=accelerometerChannel,fullsc,playTone,closeChannel,svg,.arrow-button:after,background:,background: no-rep,getAllAdjacentNodesInDirection,getAllConnectedNodesAndLinks,updateOverflowMap,getClosestNodeInDirection,builtinNameMatches,background-,isAudioStarted,startAudio,document.getElementById('saved-song-list'),background,play-button,popover,onpianoB,record-button,notifyNote,toggle,push(,setTimer,console,ontouchstart,addEv,pointerStates,background-color,flex-direction: row,margin,padding,toggleRecor,currentSong,mode =,deleteSon,setSongs,() => ,this,notes.,setHasRe,this.,this.state,isRenaming,activeNotes,lastSongNumber,toggleRe,this.notes,getTouchingGroupsInDirection,fav,await,isrec,class=,fetch,async,rules,saved_state,;,deut,name.length,getNodeWidth',getNodeWidth,_equality,compileFunctionCall,function insertNodesAndLinksFromHtml,drop,doGroupsTouch,getTouchingNodesInDirection,of currentSurface.getElementsByCla,setCursorPosition,mousedown,highlighted,mouseover,dblclick,dblclic,handleNodeMousedown,click,instances,background-color: #888;,mouse-over-instance,highlight,changeIdAction,replaceSurfaceAction,updateOver,setCurrent,replaceSur,replaceSurfaceFromHtml,replaceSurface,insertNodesAndLinksFromHtml,insertNodes,moveNodesTo,moveNodes,overflowMap,pos(,expanded,panel =,getClosestNodeTo,getNodeClosestToPosition
+Search History=active,mode,assets,thing,svg,chosenThing,.svgStr,.name,.player,taken-photo,photo-taken,Quit,quit,fade-in-text,\\,player,layoutPlayerGrid,crop-gu,closeChannel,.phone,slide-in,vmin,#,#000,%23,wheel,buttons,modeChannel,#98947f,sv,allThe,handlePl,seconds,.player video,67,phone-container,animation,waitForKeypress,dist,animationF,class="colorable",1f7,91,background:,#fff,marker,this,console,touch,video,src,moving,waitForWebsocketToConnect,waitForRtcConnection,waitForHostDisconnect,waitForHost,waitForWebsocketToDisconnect,waitForMessageFromWebsocket,waitForRtcToDisconnect,channel.,envel,modechannel,result =,movement-buttons,receiveMessageFromWebsocket,delay,keyStrokes,notes,save(,deleteSong,addSong,accelerometerChannel,fullsc,playTone,.arrow-button:after,background: no-rep,getAllAdjacentNodesInDirection,getAllConnectedNodesAndLinks,updateOverflowMap,getClosestNodeInDirection,builtinNameMatches,background-,isAudioStarted,startAudio,document.getElementById('saved-song-list'),background,play-button,popover,onpianoB,record-button,notifyNote,toggle,push(,setTimer,ontouchstart,addEv,pointerStates,background-color,flex-direction: row,margin,padding
 
 [MainWindow]
-Height 1080=682
+Height 1080=841
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAAvAAAAKqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAAAvcAAANJAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
-Width 1920=752
+Width 1920=759
 
 [Shortcuts]
 kate_mdi_toolview_kate_plugin_katesearch=none
@@ -126,3 +126,6 @@ shadingEnabled=true
 showFullPathOnRoots=false
 sortRole=0
 viewShade=193,208,209
+
+[project]
+autorepository=
