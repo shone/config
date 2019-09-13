@@ -2,5 +2,5 @@
 	email = josh.shone@gmail.com
 	name = Josh Shone
 [core]
-	editor = vim
+	editor = kate
 	excludesfile = /home/josh/.config/.gitignore
