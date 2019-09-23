@@ -4,6 +4,9 @@
 # Set main modifier key to Alt
 set $mod Mod1
 
+# Set numlock
+input * xkb_numlock enable
+
 # Floating window dragging modifier key
 floating_modifier $mod normal
 
