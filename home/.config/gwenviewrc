@@ -1,0 +1,18 @@
+[ImageView]
+AlphaBackgroundMode=AbstractImageView::AlphaBackgroundCheckBoard
+AnimationMethod=DocumentView::NoAnimation
+MouseWheelBehavior=MouseWheelBehavior::Zoom
+
+[MainWindow]
+Height 1080=798
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA/0AAAMeAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1021
+
+[SideBar]
+IsVisible ViewMode=false
+SideBarSplitterSizes=200,1002
+
+[StatusBar]
+IsVisible ViewMode=false
