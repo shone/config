@@ -54,7 +54,7 @@ Fallback Encoding=ISO-8859-15
 
 [KTextEditor Renderer]
 Animate Bracket Matching=true
-Schema=Normal
+Schema=Solarized (light)
 Show Indentation Lines=true
 Show Whole Bracket Expression=true
 Word Wrap Marker=false
