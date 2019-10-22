@@ -43,3 +43,6 @@ What=Content
 [SettingsDialog]
 Height 1080=450
 Width 1920=568
+
+[VersionControl]
+enabledPlugins=Git
