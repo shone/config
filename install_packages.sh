@@ -5,6 +5,7 @@ sudo pacman -S \
   git meld                             \ # File comparison
   dolphin dolphin-plugins breeze-icons \ # File browser + dependencies
   dmenu                                \ # App launcher
+  pulseaudio                           \
   chromium                             \
   gwenview okular grim                 \ # Image viewing/capture
   inkscape krita                       \ # Image editing
