@@ -1,6 +1,8 @@
 [user]
-	email = josh.shone@gmail.com
-	name = Josh Shone
+  email = josh.shone@gmail.com
+  name = Josh Shone
 [core]
-	editor = kate
-	excludesfile = /home/josh/.config/.gitignore
+  editor = kate
+  excludesfile = /home/josh/.config/.gitignore
+[diff]
+  tool = meld
