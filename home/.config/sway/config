@@ -29,6 +29,7 @@ bindsym Mod4+e exec dolphin
 bindsym Mod4+x exec kate
 bindsym Mod4+c exec alacritty
 bindsym Mod4+y exec chromium --app=http://localhost:8089
+bindsym Mod4+s exec grim -g "$(slurp)" screenshot.png
 
 # exit sway (logs you out of your Wayland session)
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
