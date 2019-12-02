@@ -2,7 +2,7 @@
   email = josh.shone@gmail.com
   name = Josh Shone
 [core]
-  editor = kate
+  editor = kate --block --new
   excludesfile = /home/josh/.config/.gitignore
 [diff]
   tool = meld
