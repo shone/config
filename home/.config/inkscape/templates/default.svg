@@ -11,7 +11,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="64"
    height="64"
-   viewBox="0 0 16.933333 16.933334"
+   viewBox="0 0 1 1"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 5da689c313, 2019-01-14"
@@ -53,5 +53,5 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-280.06665)" />
+     transform="translate(0,0)" />
 </svg>
