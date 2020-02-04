@@ -35,7 +35,8 @@ __powerline() {
 
         if [[ -n "$ref" ]]; then
             # prepend branch symbol
-            ref=$SYMBOL_GIT_BRANCH$ref
+            # Adds a space so the branch name can be double-clicked in Alacritty without the symbol being selected
+            ref="$SYMBOL_GIT_BRANCH $ref"
         else
             # get tag name or short unique hash
             ref=$($git_eng describe --tags --always 2>/dev/null)
@@ -57,7 +58,8 @@ __powerline() {
         done < <($git_eng status --porcelain --branch 2>/dev/null)  # note the space between the two <
 
         # print the git branch segment without a trailing newline
-        printf " $ref$marks"
+        # Adds a space before $marks so the branch name can be double-clicked in Alacritty without $marks being selected
+        printf " $ref $marks"
     }
 
     ps1() {
