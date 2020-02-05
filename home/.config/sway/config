@@ -14,8 +14,9 @@ floating_modifier $mod normal
 set $term alacritty
 
 # Application launcher
-set $menu dmenu_path | dmenu | xargs swaymsg exec
-bindsym $mod+d exec $menu
+# https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
+bindsym Mod4+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+for_window [title="^launcher$"] floating enable, border none
 
 # Wallpaper
 output * bg ~/the_cat-1920x1080.jpg fill

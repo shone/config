@@ -13,6 +13,7 @@ The [sway config](home/.config/sway/config) has keyboard shortcuts for several c
 | File browser | [Dolphin](https://kde.org/applications/system/org.kde.dolphin) | Super-E |
 | Web browser | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super-W |
 | Take screenshot | [Grim](https://github.com/emersion/grim) | Super-S |
+| App Launcher | `compgen -c \| fzf` | Super-Space |
 
 ## Fan control (for ThinkPads)
 - https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops

@@ -8,7 +8,7 @@ sudo pacman -S \
   git                     \
   meld                    \ # File comparison
   unzip                   \
-  dmenu                   \ # App launcher ((Alt-D sway shortcut)
+  fzf                     \ # Fuzzy finder, used as part of app launcher (Super-space)
   pulseaudio              \
   chromium                \ (Super-W sway shortcut)
   gwenview okular vlc     \ # Multimedia viewing

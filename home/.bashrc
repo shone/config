@@ -17,3 +17,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # https://github.com/riobard/bash-powerline
 # (with minor modifications)
 source ~/.bash-powerline.sh
+
+# fzf
+# https://github.com/junegunn/fzf
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
