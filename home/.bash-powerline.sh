@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Modified by Josh to add spaces around the git branch to allow double-click selecting
+
 ## Uncomment to disable git info
 #POWERLINE_GIT=0
 
