@@ -2,6 +2,18 @@
 
 This repository contains my personal configutation files for various tools and applications, such as [Sway](https://swaywm.org/), [Dolphin](https://github.com/KDE/dolphin), [Inkscape](https://inkscape.org/), [Alacritty](https://github.com/jwilm/alacritty) etc, and also linux system configuration like automatic login and fan control.
 
+## Keyboard Shortcuts
+
+The [sway config](home/.config/sway/config) has keyboard shortcuts for several core apps/tools:
+
+| | | |
+| - | - | - |
+| Terminal | [Alacritty](https://github.com/alacritty/alacritty) | Super-C |
+| Text editor | [Kate](https://kate-editor.org/) | Super-X |
+| File browser | [Dolphin](https://kde.org/applications/system/org.kde.dolphin) | Super-E |
+| Web browser | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super-W |
+| Take screenshot | [Grim](https://github.com/emersion/grim) | Super-S |
+
 ## Fan control (for ThinkPads)
 - https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops
 - https://github.com/hspak/simpfand
