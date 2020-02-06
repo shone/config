@@ -8,6 +8,7 @@ sudo pacman -S \
   git                     \
   meld                    \ # File comparison
   unzip                   \
+  rsync                   \ # Remote file/directory synchronization
   fzf                     \ # Fuzzy finder, used as part of app launcher (Super-space)
   pulseaudio              \
   chromium                \ (Super-W sway shortcut)
