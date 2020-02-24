@@ -6,6 +6,7 @@ sudo systemctl start ntpdate.service # Just synchronizes once and stops
 BASE_PACKAGES=(
   sway                    # Window manager (wayland)
   alacritty               # Terminal (Super-C sway shortcut)
+  waybar otf-font-awesome # System status indicators + special character font used by waybar
   breeze-icons            # Icons for KDE apps (Dolphin, Kate)
   kate                    # Text editor (Super-X sway shortcut)
   dolphin dolphin-plugins # File browser (Super-E sway shortcut)
@@ -28,9 +29,6 @@ sudo pacman -S "${BASE_PACKAGES[@]}"
 yay -S "${AUR_PACKAGES[@]}"
 
 # Extra for laptops
-sudo pacman -S \
-  waybar \
-  otf-font-awesome #(for special characters used by waybar)
 yay -S simpfand-git
 systemctl enable simpfand
 systemctl start simpfand
