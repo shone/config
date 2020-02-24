@@ -6,7 +6,6 @@ Name[en_GB]=Kate
 Comment=KDE Advanced Text Editor
 Comment[en_GB]=KDE Advanced Text Editor
 MimeType=text/plain;
-Exec=kate --block --new %U
 StartupNotify=true
 X-KDE-HasTempFileOption=true
 Icon=kate
@@ -17,3 +16,8 @@ InitialPreference=9
 X-DBUS-StartupType=Multi
 X-DBUS-ServiceName=org.kde.kate
 Categories=Qt;KDE;Utility;TextEditor;
+
+# Command line options
+# See https://docs.kde.org/stable5/en/applications/kate/fundamentals.html#starting-from-the-command-line
+# Passes --new so Kate is always opened in a new window
+Exec=kate --block --new %U

@@ -2,7 +2,7 @@
   email = josh.shone@gmail.com
   name = Josh Shone
 [core]
-  editor = kate --block --new
+  editor = kate --block --new # block option required to make git wait for Kate to close
   excludesfile = /home/josh/.config/.gitignore
 [diff]
-  tool = meld
+  tool = meld # Used by git difftool command
