@@ -7,6 +7,7 @@ BASE_PACKAGES=(
   sway                    # Window manager (wayland)
   alacritty               # Terminal (Super-C sway shortcut)
   waybar otf-font-awesome # System status indicators + special character font used by waybar
+  xorg-server-xwayland    # Required to run X applications like Chromium, Kate etc. on sway/wayland
   breeze-icons            # Icons for KDE apps (Dolphin, Kate)
   kate                    # Text editor (Super-X sway shortcut)
   dolphin dolphin-plugins # File browser (Super-E sway shortcut)
