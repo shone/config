@@ -6,6 +6,7 @@ sudo systemctl start ntpdate.service # Just synchronizes once and stops
 BASE_PACKAGES=(
   sway                    # Window manager (wayland)
   alacritty               # Terminal (Super-C sway shortcut)
+  wl-clipboard            # Wayland clipboard utilities
   waybar otf-font-awesome # System status indicators + special character font used by waybar
   xorg-server-xwayland    # Required to run X applications like Chromium, Kate etc. on sway/wayland
   breeze-icons            # Icons for KDE apps (Dolphin, Kate)
