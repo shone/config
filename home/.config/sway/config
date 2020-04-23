@@ -19,13 +19,15 @@ bindsym Mod4+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort
 for_window [title="^launcher$"] floating enable, border none
 
 # Wallpaper
-output * bg ~/the_cat-1920x1080.jpg fill
+output * bg #000000 solid_color
+#output * bg ~/the_cat-1920x1080.jpg fill
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # Main app shortcuts
-bindsym Mod4+w exec chromium --start-maximized
+bindsym Mod4+w exec chromium
+bindsym Mod4+Shift+w exec chromium --incognito
 bindsym Mod4+e exec dolphin
 bindsym Mod4+x exec kate
 bindsym Mod4+c exec alacritty
@@ -62,20 +64,7 @@ bindsym $mod+Shift+c reload
   # move focus to the parent container
   bindsym $mod+a focus parent
 
-# Status Bar:
-bar {
-    position top
-
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
-
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
-#exec waybar # use this instead on laptops
+# Status Bar
+exec waybar
 
 include /etc/sway/config.d/*
