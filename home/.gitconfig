@@ -1,8 +1,10 @@
 [user]
-  email = josh.shone@gmail.com
-  name = Josh Shone
+	email = josh.shone@gmail.com
+	name = Josh Shone
 [core]
-  editor = kate --block --new # block option required to make git wait for Kate to close
-  excludesfile = /home/josh/.config/.gitignore
+	editor = kate --block --new # block option required to make git wait for Kate to close
+	excludesfile = /home/josh/.config/.gitignore
 [diff]
-  tool = meld # Used by git difftool command
+	tool = meld # Used by git difftool command
+[pull]
+	ff = only # Prevents warning introduced in Git 2.27
