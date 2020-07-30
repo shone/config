@@ -1,44 +1,40 @@
 # Josh's Sway config
 # Belongs at ~/.config/sway/config
 
-# Set main modifier key to Alt
-set $mod Mod1
+set $alt Mod1
+
+# Windows key
+set $super Mod4
 
 # Set numlock
 input * xkb_numlock enable
 
 # Floating window dragging modifier key
-floating_modifier $mod normal
-
-# Terminal emulator
-set $term alacritty
+floating_modifier $alt normal
 
 # Application launcher
-# https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
-bindsym Mod4+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 for_window [title="^launcher$"] floating enable, border none
 
-# Wallpaper
+# Wallpaper (solid black background)
 output * bg #000000 solid_color
-#output * bg ~/the_cat-1920x1080.jpg fill
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $alt+Shift+q kill
 
-# Main app shortcuts
-bindsym Mod4+w exec chromium
-bindsym Mod4+Shift+w exec chromium --incognito
-bindsym Mod4+e exec dolphin
-bindsym Mod4+x exec kate
-bindsym Mod4+c exec alacritty
-bindsym Mod4+y exec chromium --app=http://localhost:8089
-bindsym Mod4+s exec grim -g "$(slurp)" screenshot.png
+# Main app shortcuts ("super" = Windows key)
+bindsym $super+w exec chromium
+bindsym $super+Shift+w exec chromium --incognito
+bindsym $super+e exec dolphin
+bindsym $super+x exec kate
+bindsym $super+c exec alacritty
+bindsym $super+s exec grim -g "$(slurp)" screenshot.png
 
 # exit sway (logs you out of your Wayland session)
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $alt+Shift+c reload
 
 #
 # Layout stuff:
@@ -48,23 +44,49 @@ bindsym $mod+Shift+c reload
   for_window [title="[.]*"] floating enable
 
   # Switch the current container between different layout styles
-  bindsym $mod+s layout stacking
-  bindsym $mod+w layout tabbed
-  bindsym $mod+e layout toggle split
+  bindsym $alt+s layout stacking
+  bindsym $alt+w layout tabbed
+  bindsym $alt+e layout toggle split
 
   # Make the current focus fullscreen
-  bindsym $mod+f fullscreen
+  bindsym $alt+f fullscreen
 
   # Toggle the current focus between tiling and floating mode
-  bindsym $mod+Shift+space floating toggle
+  bindsym $alt+Shift+space floating toggle
 
   # Swap focus between the tiling area and the floating area
-  bindsym $mod+space focus mode_toggle
+  bindsym $alt+space focus mode_toggle
 
   # move focus to the parent container
-  bindsym $mod+a focus parent
+  bindsym $alt+a focus parent
 
-# Status Bar
-exec waybar
+#
+# Workspaces:
+#
+  # Switch to workspace
+  bindsym $alt+1 workspace number 1
+  bindsym $alt+2 workspace number 2
+  bindsym $alt+3 workspace number 3
+  bindsym $alt+4 workspace number 4
+  bindsym $alt+5 workspace number 5
+  bindsym $alt+6 workspace number 6
+  bindsym $alt+7 workspace number 7
+  bindsym $alt+8 workspace number 8
+  bindsym $alt+9 workspace number 9
+  bindsym $alt+0 workspace number 10
+
+  # Move focused container to workspace
+  bindsym $alt+Shift+1 move container to workspace number 1
+  bindsym $alt+Shift+2 move container to workspace number 2
+  bindsym $alt+Shift+3 move container to workspace number 3
+  bindsym $alt+Shift+4 move container to workspace number 4
+  bindsym $alt+Shift+5 move container to workspace number 5
+  bindsym $alt+Shift+6 move container to workspace number 6
+  bindsym $alt+Shift+7 move container to workspace number 7
+  bindsym $alt+Shift+8 move container to workspace number 8
+  bindsym $alt+Shift+9 move container to workspace number 9
+  bindsym $alt+Shift+0 move container to workspace number 10
+
+exec waybar # use this instead on laptops
 
 include /etc/sway/config.d/*
