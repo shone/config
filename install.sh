@@ -20,6 +20,7 @@ BASE_PACKAGES=(
   pulseaudio
   chromium                # (Super-W sway shortcut)
   gwenview okular vlc     # Multimedia viewing
+  slurp                   # Select regions on screen for image/video capture
   grim                    # Screen capture (Super-S sway shortcut)
   inkscape krita          # Image editing
 )
