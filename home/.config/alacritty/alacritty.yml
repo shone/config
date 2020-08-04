@@ -32,6 +32,9 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
 
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
   # Window decorations
   #
   # Values for `decorations`:
@@ -143,7 +146,7 @@ colors:
     cyan:    '0x93a1a1' # base1
     white:   '0xfdf6e3' # base3
 
-# Visual Bell
+# Bell
 #
 # Any time the BEL code is received, Alacritty "rings" the visual bell. Once
 # rung, the terminal background will be set to white and transition back to the
@@ -164,9 +167,9 @@ colors:
 #   - Linear
 #
 # Specifying a `duration` of `0` will disable the visual bell.
-visual_bell:
+bell:
   animation: EaseOutExpo
-  duration: 0
+  duration: 100
 
 # Background opacity
 #
