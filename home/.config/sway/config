@@ -87,6 +87,6 @@ bindsym $alt+Shift+c reload
   bindsym $alt+Shift+9 move container to workspace number 9
   bindsym $alt+Shift+0 move container to workspace number 10
 
-exec waybar # use this instead on laptops
+exec waybar
 
 include /etc/sway/config.d/*
