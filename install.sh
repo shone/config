@@ -27,6 +27,7 @@ BASE_PACKAGES=(
 AUR_PACKAGES=(
   wf-recorder # Video screen capture
   spotify
+  wdisplays # Graphical monitor setup
 )
 sudo pacman -S "${BASE_PACKAGES[@]}"
 yay -S "${AUR_PACKAGES[@]}"

@@ -29,6 +29,7 @@ bindsym $super+e exec dolphin
 bindsym $super+x exec kate
 bindsym $super+c exec alacritty
 bindsym $super+s exec grim -g "$(slurp)" screenshot.png
+bindsym $super+d wdisplays
 
 # exit sway (logs you out of your Wayland session)
 bindsym $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
