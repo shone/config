@@ -5,6 +5,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 export XDG_CURRENT_DESKTOP=KDE
+export KDE_SESSION_VERSION=5
 export QT_AUTO_SCREEN_SCALE_FACTOR=0 # Prevent super small fonts in certain cases
 
 # Make QT apps use native wayland instead of xwayland
