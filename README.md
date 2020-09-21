@@ -14,6 +14,26 @@ The [sway config](home/.config/sway/config) has keyboard shortcuts for several c
 | Web browser | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super-W |
 | Take screenshot | [Grim](https://github.com/emersion/grim) | Super-S |
 | App Launcher | `compgen -c \| fzf` | Super-Space |
+| Display setup | wdisplays | Super-D |
+
+## NTP
+
+https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon#Installation
+
+```bash
+sudo pacman -S ntp
+sudo systemctl enable ntpdate.service # Will only synchronize clock on boot
+sudo systemctl start ntpdate.service # Just synchronizes once and stops
+```
+
+## yay (for AUR)
+
+```bash
+git clone git@github.com:Jguer/yay.git
+cd yay
+sudo pacman -S gcc binutils
+makepkg -si
+```
 
 ## Fan control (for ThinkPads)
 - https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops

@@ -1,8 +1,3 @@
-# https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon#Installation
-sudo pacman -S ntp
-sudo systemctl enable ntpdate.service # Will only synchronize clock on boot
-sudo systemctl start ntpdate.service # Just synchronizes once and stops
-
 BASE_PACKAGES=(
   sway                    # Window manager (wayland)
   alacritty               # Terminal (Super-C sway shortcut)
@@ -24,16 +19,13 @@ BASE_PACKAGES=(
   grim                    # Screen capture (Super-S sway shortcut)
   inkscape krita          # Image editing
 )
+
+sudo pacman -S "${BASE_PACKAGES[@]}"
+
 AUR_PACKAGES=(
   wf-recorder # Video screen capture
   spotify
   wdisplays # Graphical monitor setup
 )
-sudo pacman -S "${BASE_PACKAGES[@]}"
-yay -S "${AUR_PACKAGES[@]}"
 
-# Extra for laptops
-yay -S simpfand-git
-systemctl enable simpfand
-systemctl start simpfand
-sensors # Check that fan control is working:
+yay -S "${AUR_PACKAGES[@]}"
