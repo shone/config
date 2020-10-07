@@ -13,6 +13,8 @@
   #TERM: xterm-256color
 
 window:
+  title: ''
+
   # Window dimensions (changes require restart)
   #
   # Specified in number of columns/lines, not pixels.
@@ -218,7 +220,7 @@ mouse:
     #
     # These are the modifiers that need to be held down for opening URLs when clicking
     # on them. The available modifiers are documented in the key binding section.
-    #modifiers: Control|Shift
+    modifiers: Control|Shift
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
