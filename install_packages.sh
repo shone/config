@@ -15,6 +15,7 @@ BASE_PACKAGES=(
   fzf                     # Fuzzy finder, used as part of app launcher (Super-space)
   pulseaudio
   chromium                # (Super-W sway shortcut)
+  firefox                 # (Super-F sway shortcut)
   gwenview okular vlc     # Multimedia viewing
   slurp                   # Select regions on screen for image/video capture
   grim                    # Screen capture (Super-S sway shortcut)

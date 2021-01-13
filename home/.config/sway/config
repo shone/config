@@ -25,6 +25,8 @@ bindsym $alt+Shift+q kill
 # Main app shortcuts ("super" = Windows key)
 bindsym $super+w exec chromium
 bindsym $super+Shift+w exec chromium --incognito
+bindsym $super+f exec firefox
+bindsym $super+Shift+f exec firefox -private-window
 bindsym $super+e exec dolphin
 bindsym $super+x exec kate
 bindsym $super+c exec alacritty
