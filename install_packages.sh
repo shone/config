@@ -10,6 +10,7 @@ BASE_PACKAGES=(
   dolphin dolphin-plugins # File browser (Super-E sway shortcut)
   git
   meld                    # File comparison
+  ripgrep                 # File searching
   unzip
   rsync                   # Remote file/directory synchronization
   fzf                     # Fuzzy finder, used as part of app launcher (Super-space)
