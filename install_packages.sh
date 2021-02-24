@@ -11,6 +11,7 @@ BASE_PACKAGES=(
   dolphin dolphin-plugins # File browser (Super-E sway shortcut)
   packagekit-qt5          # This was required to install the Meld menu service inside Dolphin
   git
+  go                      # The Go programming language
   meld                    # File comparison
   ripgrep                 # File searching
   unzip
