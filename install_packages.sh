@@ -10,6 +10,7 @@ BASE_PACKAGES=(
   kate                    # Text editor (Super-X sway shortcut)
   dolphin dolphin-plugins # File browser (Super-E sway shortcut)
   packagekit-qt5          # This was required to install the Meld menu service inside Dolphin
+  filelight               # For visualizing disk usage
   git
   go                      # The Go programming language
   meld                    # File comparison
