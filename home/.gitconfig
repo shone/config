@@ -8,3 +8,5 @@
 	tool = meld # Used by git difftool command
 [pull]
 	ff = only # Prevents warning introduced in Git 2.27
+[init]
+	defaultBranch = master
