@@ -30,6 +30,10 @@ sudo systemctl start ntpdate.service # Just synchronizes once and stops
 
 ```bash
 git clone git@github.com:Jguer/yay.git
+# Need to get PKGBUILD file from a different repo
+# See https://github.com/Jguer/yay/issues/1179
+git clone https://aur.archlinux.org/yay.git yay_pkgbuild
+cp yay_pkgbuild/PKGBUILD yay/
 cd yay
 makepkg -si # Assumes base-devel package is already installed
 ```
