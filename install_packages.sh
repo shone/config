@@ -9,6 +9,7 @@ BASE_PACKAGES=(
   breeze-icons            # Icons for KDE apps (Dolphin, Kate)
   kate                    # Text editor (Super-X sway shortcut)
   dolphin dolphin-plugins # File browser (Super-E sway shortcut)
+  packagekit-qt5          # This was required to install the Meld menu service inside Dolphin
   git
   meld                    # File comparison
   ripgrep                 # File searching
