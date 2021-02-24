@@ -31,8 +31,7 @@ sudo systemctl start ntpdate.service # Just synchronizes once and stops
 ```bash
 git clone git@github.com:Jguer/yay.git
 cd yay
-sudo pacman -S gcc binutils
-makepkg -si
+makepkg -si # Assumes base-devel package is already installed
 ```
 
 ## Fan control (for ThinkPads)

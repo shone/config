@@ -1,4 +1,5 @@
 BASE_PACKAGES=(
+  base-devel              # Includes GCC, binutils, and other core tools
   sway                    # Window manager (wayland)
   alacritty               # Terminal (Super-C sway shortcut)
   wl-clipboard            # Wayland clipboard utilities
@@ -24,11 +25,3 @@ BASE_PACKAGES=(
 )
 
 sudo pacman -S "${BASE_PACKAGES[@]}"
-
-AUR_PACKAGES=(
-  wf-recorder # Video screen capture
-  spotify
-  wdisplays # Graphical monitor setup
-)
-
-yay -S "${AUR_PACKAGES[@]}"
