@@ -13,6 +13,7 @@ input * xkb_numlock enable
 floating_modifier $alt normal
 
 # Application launcher
+# https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
 bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 for_window [title="^launcher$"] floating enable, border none
 
@@ -31,6 +32,7 @@ bindsym $super+e exec dolphin
 bindsym $super+x exec kate
 bindsym $super+c exec alacritty
 bindsym $super+s exec grim -g "$(slurp)" screenshot.png
+bindsym $super+Shift+s exec grim screenshot.png
 bindsym $super+d wdisplays
 
 # exit sway (logs you out of your Wayland session)
