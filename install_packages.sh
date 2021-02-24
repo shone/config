@@ -15,6 +15,7 @@ BASE_PACKAGES=(
   go                      # The Go programming language
   meld                    # File comparison
   ripgrep                 # File searching
+  jq                      # JSON manipulation
   unzip
   rsync                   # Remote file/directory synchronization
   fzf                     # Fuzzy finder, used as part of app launcher (Super-space)
