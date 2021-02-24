@@ -48,3 +48,11 @@ systemctl start simpfand
 # Check that fan control is working:
 sensors
 ```
+
+## Dynamically set Alacritty window title
+
+With `window.dynamic_title` in `~/.config/alacritty/alacritty.yml` set to true:
+
+```bash
+echo -e "\033]0;my-window-title\007"
+```
