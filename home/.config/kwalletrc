@@ -1,0 +1,5 @@
+# Try to prevent annoying KWallet popup from appearing.
+# https://unix.stackexchange.com/a/373877
+# Didn't prevent Chromium from showing the popup though. See chromium-flags.conf
+[Wallet]
+Enabled=false
