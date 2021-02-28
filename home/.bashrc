@@ -6,11 +6,13 @@ PS1='[\u@\h \W]\$ '
 
 export XDG_CURRENT_DESKTOP=KDE
 
-# This causes context menus in Dolphin and Kate to appear in the wrong locations.
-# It does allow Dolphin's single-click-to-open mode to work though.
+# Setting this fixes /usr/bin/xdg-settings, which on line 664 would attempt to use kreadconfig, but only kreadconfig5 is installed by the Arch kconfig package.
 export KDE_SESSION_VERSION=5
 
-export QT_AUTO_SCREEN_SCALE_FACTOR=0 # Prevent super small fonts in certain cases
+export BROWSER=firefox
+
+# Prevent super small fonts in certain cases
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
 
 # Make QT apps use native wayland instead of xwayland
 # Has issues though, like context menus appearing in the wrong location.
