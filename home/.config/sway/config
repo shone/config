@@ -48,6 +48,11 @@ bindsym $super+d exec wdisplays
 # /etc/modprobe.d/v4l2loopback.conf
 bindsym $super+v exec alacritty --title "Screen capture to virtual webcam" -e bash -c 'wf-recorder --muxer=v4l2 --codec=rawvideo --pixel-format=yuv420p --file=/dev/video2'
 
+# Audio volume keybindings
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
 # exit sway (logs you out of your Wayland session)
 bindsym $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
 
