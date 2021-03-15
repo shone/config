@@ -8,13 +8,14 @@ The [sway config](home/.config/sway/config) has keyboard shortcuts for several c
 
 | | | |
 | - | - | - |
-| Terminal | [Alacritty](https://github.com/alacritty/alacritty) | Super-C |
-| Text editor | [Kate](https://kate-editor.org/) | Super-X |
-| File browser | [Dolphin](https://kde.org/applications/system/org.kde.dolphin) | Super-E |
-| Web browser | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super-W |
-| Take screenshot | [Grim](https://github.com/emersion/grim) | Super-S |
-| App Launcher | `compgen -c \| fzf` | Super-Space |
-| Display setup | wdisplays | Super-D |
+| Terminal | [Alacritty](https://github.com/alacritty/alacritty) | Super+C |
+| Text editor | [Kate](https://kate-editor.org/) | Super+X |
+| File browser | [Dolphin](https://kde.org/applications/system/org.kde.dolphin) | Super+E |
+| Firefox | [Firefox](https://www.mozilla.org/en-US/firefox/) | Super+F |
+| Chromium | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super+W |
+| Take screenshot | [Grim](https://github.com/emersion/grim) | Super+S |
+| App Launcher | `compgen -c \| fzf` | Super+Space |
+| Display setup | wdisplays | Super+D |
 | Audio volume | pactl | Super+0-9 |
 | Toggle mute | pactl | Super+Grave |
 
