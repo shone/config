@@ -1,5 +1,6 @@
 BASE_PACKAGES=(
   base-devel              # Includes GCC, binutils, and other core tools
+  linux-headers           # Requied by v4l2loopback-dkms
   sway                    # Window manager (wayland)
   alacritty               # Terminal (Super-C sway shortcut)
   wl-clipboard            # Wayland clipboard utilities
@@ -25,6 +26,7 @@ BASE_PACKAGES=(
   gwenview okular vlc     # Multimedia viewing
   slurp                   # Select regions on screen for image/video capture
   grim                    # Screen capture (Super-S sway shortcut)
+  v4l2loopback-dkms       # For doing virtual webcams. (Super-V for capturing screen into virtual webcam).
   inkscape krita          # Image editing
 )
 

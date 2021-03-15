@@ -41,6 +41,13 @@ bindsym $super+s exec grim -g "$(slurp)" screenshot.png
 bindsym $super+Shift+s exec grim screenshot.png
 bindsym $super+d exec wdisplays
 
+# Shortcut to record the screen into a virtual webcam using https://github.com/umlaeute/v4l2loopback
+# This can work around Zoom or Slack's limited screen capture support on Wayland and Firefox.
+# See also:
+# /etc/modules-load.d/v4l2loopback.conf
+# /etc/modprobe.d/v4l2loopback.conf
+bindsym $super+v exec alacritty --title "Screen capture to virtual webcam" -e bash -c 'wf-recorder --muxer=v4l2 --codec=rawvideo --pixel-format=yuv420p --file=/dev/video2'
+
 # exit sway (logs you out of your Wayland session)
 bindsym $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
 
