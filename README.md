@@ -1,6 +1,6 @@
 # Config
 
-This repository contains my personal configutation files for various tools and applications, such as [Sway](https://swaywm.org/), [Dolphin](https://github.com/KDE/dolphin), [Inkscape](https://inkscape.org/), [Alacritty](https://github.com/jwilm/alacritty) etc, and also linux system configuration like automatic login and fan control.
+This repository contains my personal configuration files for various tools and applications, such as [Sway](https://swaywm.org/), [Dolphin](https://github.com/KDE/dolphin), [Inkscape](https://inkscape.org/), [Alacritty](https://github.com/jwilm/alacritty) etc, and also linux system configuration like automatic login and fan control.
 
 ## Keyboard Shortcuts
 
@@ -15,6 +15,8 @@ The [sway config](home/.config/sway/config) has keyboard shortcuts for several c
 | Take screenshot | [Grim](https://github.com/emersion/grim) | Super-S |
 | App Launcher | `compgen -c \| fzf` | Super-Space |
 | Display setup | wdisplays | Super-D |
+| Audio volume | pactl | Super+0-9 |
+| Toggle mute | pactl | Super+Grave |
 
 ## NTP
 
