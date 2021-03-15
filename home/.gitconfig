@@ -2,8 +2,11 @@
 	email = josh.shone@gmail.com
 	name = Josh Shone
 [core]
-	editor = kate --block --new # block option required to make git wait for Kate to close
+# Set Kate as editor for commit messages, rebase commands etc.
+# --block option required to make git wait for Kate to close.
+# Set QT_LOGGING_RULES to prevent a bunch of warnings about spellcheck.
 	excludesfile = /home/josh/.config/.gitignore
+	editor = QT_LOGGING_RULES="*=false" kate --block --new
 [diff]
 	tool = meld # Used by git difftool command
 [pull]
