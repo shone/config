@@ -1,6 +1,6 @@
 [{
-  // For two 1080p monitors connected to a ThinkPad X1 via a dock:
-  "output": ["DP-4", "DP-5"],
+  // For all monitors except the laptop display:
+  "output": "!eDP-1",
 
   "position": "top",
   "layer": "bottom", // Appear beneath other windows
