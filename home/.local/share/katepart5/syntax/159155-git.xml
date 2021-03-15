@@ -1,0 +1,110 @@
+<!-- Syntax highlighting for git commit/rebase, downloaded from https://store.kde.org/p/1220560/ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE language>
+<language name="git_commit" version="1.24" kateversion="2.4" section="Other" extensions=".git/COMMIT_EDITMSG" mimetype="" >
+ <highlighting>
+<!--  Listas de palabras (keywords) a resaltar -->
+<!--    <list name="somename">
+     <item>commit</item>
+     <item>committed</item>
+    </list>-->
+<!--     Contexto dice como formatear las palabas que esten dentro de un contexto -->
+    <contexts>
+<!--    El primer contexto. Si la linea comienza por '#', salto a 'Comment'. Los primeros 50 caractere están en negrita,
+    el resto en rojo, para que la primera linea no sea muy larga. Al final de linea, salto a 'Normal Text'-->
+     <context attribute="primeralinea" lineEndContext="segundalinea"  name="primeralinea" >
+          <DetectChar attribute="Comment" context="Comment" char="#" />
+          <RegExpr attribute="checkedbold" context="primeralinea"  String="^.{0,50}" />
+      </context>
+      <context attribute="primeralinea"  lineEndContext="Normal Text"  name="segundalinea" >
+          <DetectChar attribute="Comment" context="Comment" char="#" />
+      </context>
+<!--Este es el contexto de texto normal      -->
+      <context attribute="Normal Text" lineEndContext="#pop" name="Normal Text">
+        <!--<keyword attribute="Keyword" context="#stay" String="somename" />-->
+<!--         Dentro del texto normal aplican el comentario y entrecomillado -->
+<!--         <DetectChar attribute="String" context="string" char="&quot;" />-->
+<!--         Dentro del texto normal aplican el comentario -->
+         <DetectChar attribute="Comment" context="Comment" char="#" />
+         
+<!--          <RegExpr attribute="Keyword" context="#stay" String="^.{0,50}" fallthrough="1" fallthroughContext="String"/> -->
+<!-- 	 <RegExpr attribute="Normal Text" context="Normal Text"  String="(^.{0,50})" dynamic="true"/> -->
+	 
+	 
+<!-- 	 <RegExpr attribute="Normal Text" context="primeralinea"  String="?(1)" dynamic="1" /> -->
+      </context>
+     
+      
+<!-- Aquí digo que pasa dentro del comentario. el lineEndContext="#pop" dice que se acabe cuando acabe la linea -->
+      <context attribute="Comment" lineEndContext="#pop" name="Comment" >
+<!--       Dentro de los comentarios quiero que también funcionen el entrecomillado -->
+	     <DetectChar attribute="String" context="string" char="&quot;" />
+<!-- 	     quiero que los keywords sean resaltados (solo en los comentarios) -->
+	     <keyword attribute="Keyword" context="#stay" String="somename" />
+<!-- 	     Hago que busque todo lo que esté después de ':' y lo meta en el contexto 'file' -->
+<!-- 	     <DetectChar attribute="Comment" context="file" char=":" /> -->
+<!-- 	     Hago que busque todo lo que esté después de 'new file:' y lo meta en el contexto 'newfile' -->
+	     <RegExpr attribute="newfile" context="newfile" String="new file:" />
+<!-- 	     Hago que busque todo lo que esté después de 'modified:' y lo meta en el contexto 'modfile' -->
+	     <RegExpr attribute="modfile" context="modfile" String="modified:" />
+<!-- 	     Hago que busque todo lo que esté después de 'renamed:' y lo meta en el contexto 'modfile' -->
+	     <RegExpr attribute="modfile" context="modfile" String="renamed:" />
+<!-- 	     Hago que busque todo lo que esté después de 'deleted:' y lo meta en el contexto 'delfile' -->
+	     <RegExpr attribute="delfile" context="delfile" String="deleted:" />
+	     
+<!-- 	     Frases a ser resaltadas -->
+	     <RegExpr attribute="frase" context="#stay" String="Changes to be committed:" />
+	     <RegExpr attribute="frase" context="#stay" String="Changed but not updated:" />
+	     <RegExpr attribute="frase" context="#stay" String="Untracked files:" />
+      </context>
+      
+<!--       Todo lo que esté después de 'newfile:' tendrá atributo hasta llegar al fin de linea -->
+      <context attribute="subnewfile" lineEndContext="#pop" name="newfile" >
+      </context>
+      <context attribute="submodfile" lineEndContext="#pop" name="modfile" >
+      </context>
+      <context attribute="subdelfile" lineEndContext="#pop" name="delfile" >
+      </context>
+      
+<!-- Aqui digo que pasa dentro del entre comillado. lineEndContext="#stay" dice que no termine cuando termine la línea -->
+      <context attribute="String" lineEndContext="#stay" name="string" >
+<!--       Si me encuentro una comilla, termino el entrecomillado -->
+        <DetectChar attribute="String" context="#pop" char="&quot;" />
+      </context>
+     
+    </contexts>
+<!--     Aquí es donde digo que formato tendrá cada contexto -->
+    <itemDatas>
+      <itemData name="Normal Text" defStyleNum="dsNormal" spellChecking="1"/>
+      
+      <itemData name="primeralinea" defStyleNum="dsString" spellChecking="1" />
+      
+<!--       <itemData name="segundalinea" defStyleNum="dsString" spellChecking="1" /> -->
+      
+      <itemData name="newfile" defStyleNum="dsNormal"  color="#008000" spellChecking="0"/>
+      <itemData name="subnewfile" defStyleNum="dsNormal"  bold="1"  color="#008000" spellChecking="0"/>
+      
+      <itemData name="modfile" defStyleNum="dsNormal"  color="#C0C000" spellChecking="0"/>
+      <itemData name="submodfile" defStyleNum="dsNormal"  bold="1"  color="#C0C000" spellChecking="0"/>
+      
+      <itemData name="delfile" defStyleNum="dsNormal"  color="#A75552" spellChecking="0"/>
+      <itemData name="subdelfile" defStyleNum="dsNormal"  bold="1"  color="#A75552" spellChecking="0"/>
+      
+      <itemData name="Keyword" defStyleNum="dsKeyword" spellChecking="0" />
+      <itemData name="String" defStyleNum="dsString" spellChecking="0" />
+      
+      <itemData name="checkedbold" defStyleNum="dsKeyword" spellChecking="1" />
+      
+      <itemData name="frase" defStyleNum="dsComment" underline="1" spellChecking="0"/>
+      
+      <itemData name="Comment" defStyleNum="dsComment"  spellChecking="0"/>
+    </itemDatas>
+  </highlighting>
+  <general>
+<!--   Esto es para que funcionen los botones de comentar y descomentar -->
+    <comments>
+      <comment name="singleLine" start="#"/>
+    </comments>
+    <keywords casesensitive="1"/>
+  </general>
+</language>
