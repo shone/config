@@ -97,7 +97,8 @@ bindsym $alt+Shift+c reload
   bindsym $alt+space focus mode_toggle
 
   # move focus to the parent container
-  bindsym $alt+a focus parent
+  # (Disabed to Zoom keyboard shortcut for toggling mute can work)
+  #bindsym $alt+a focus parent
 
 #
 # Workspaces:
