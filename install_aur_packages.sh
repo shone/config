@@ -1,7 +1,6 @@
 AUR_PACKAGES=(
-  wf-recorder # Video screen capture
   spotify
-  wdisplays # Graphical monitor setup
+  wdisplays # Graphical monitor setup (Super+D Sway shortcut)
 )
 
 yay -S "${AUR_PACKAGES[@]}"

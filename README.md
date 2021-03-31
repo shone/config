@@ -6,18 +6,19 @@ This repository contains my personal configuration files for various tools and a
 
 The [sway config](home/.config/sway/config) has keyboard shortcuts for several core apps/tools:
 
-| | | |
-| - | - | - |
-| Terminal | [Alacritty](https://github.com/alacritty/alacritty) | Super+C |
-| Text editor | [Kate](https://kate-editor.org/) | Super+X |
-| File browser | [Dolphin](https://kde.org/applications/system/org.kde.dolphin) | Super+E |
-| Firefox | [Firefox](https://www.mozilla.org/en-US/firefox/) | Super+F |
-| Chromium | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super+W |
-| Take screenshot | [Grim](https://github.com/emersion/grim) | Super+S |
-| App Launcher | `compgen -c \| fzf` | Super+Space |
-| Display setup | wdisplays | Super+D |
-| Audio volume | pactl | Super+0-9 |
-| Toggle mute | pactl | Super+Grave |
+|                |                                                                       |             |
+| -              | -                                                                     | -           |
+| Terminal       | [Alacritty](https://github.com/alacritty/alacritty)                   | Super+C     |
+| Text editor    | [Kate](https://kate-editor.org/)                                      | Super+X     |
+| File browser   | [Dolphin](https://kde.org/applications/system/org.kde.dolphin)        | Super+E     |
+| Firefox        | [Firefox](https://www.mozilla.org/en-US/firefox/)                     | Super+F     |
+| Chromium       | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super+W     |
+| Screenshot     | [Grim](https://github.com/emersion/grim)                              | Super+S     |
+| Virtual webcam | [v4l2loopback](https://github.com/umlaeute/v4l2loopback)              | Super+V     |
+| App Launcher   | `compgen -c \| fzf`                                                   | Super+Space |
+| Display setup  | wdisplays                                                             | Super+D     |
+| Audio volume   | pactl                                                                 | Super+0-9   |
+| Toggle mute    | pactl                                                                 | Super+Grave |
 
 ## NTP
 
