@@ -6,19 +6,19 @@ This repository contains my personal configuration files for various tools and a
 
 The [sway config](home/.config/sway/config) has keyboard shortcuts for several core apps/tools:
 
-|                |                                                                       |             |
-| -              | -                                                                     | -           |
-| Terminal       | [Alacritty](https://github.com/alacritty/alacritty)                   | Super+C     |
-| Text editor    | [Kate](https://kate-editor.org/)                                      | Super+X     |
-| File browser   | [Dolphin](https://kde.org/applications/system/org.kde.dolphin)        | Super+E     |
-| Firefox        | [Firefox](https://www.mozilla.org/en-US/firefox/)                     | Super+F     |
-| Chromium       | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | Super+W     |
-| Screenshot     | [Grim](https://github.com/emersion/grim)                              | Super+S     |
-| Virtual webcam | [v4l2loopback](https://github.com/umlaeute/v4l2loopback)              | Super+V     |
-| App Launcher   | `compgen -c \| fzf`                                                   | Super+Space |
-| Display setup  | wdisplays                                                             | Super+D     |
-| Audio volume   | pactl                                                                 | Super+0-9   |
-| Toggle mute    | pactl                                                                 | Super+Grave |
+|                |                                                                       |                                     |
+| -              | -                                                                     | -                                   |
+| Terminal       | [Alacritty](https://github.com/alacritty/alacritty)                   | <kbd>Super</kbd> + <kbd>C</kbd>     |
+| Text editor    | [Kate](https://kate-editor.org/)                                      | <kbd>Super</kbd> + <kbd>X</kbd>     |
+| File browser   | [Dolphin](https://kde.org/applications/system/org.kde.dolphin)        | <kbd>Super</kbd> + <kbd>E</kbd>     |
+| Firefox        | [Firefox](https://www.mozilla.org/en-US/firefox/)                     | <kbd>Super</kbd> + <kbd>F</kbd>     |
+| Chromium       | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | <kbd>Super</kbd> + <kbd>W</kbd>     |
+| Screenshot     | [Grim](https://github.com/emersion/grim)                              | <kbd>Super</kbd> + <kbd>S</kbd>     |
+| Virtual webcam | [v4l2loopback](https://github.com/umlaeute/v4l2loopback)              | <kbd>Super</kbd> + <kbd>V</kbd>     |
+| App Launcher   | `compgen -c \| fzf`                                                   | <kbd>Super</kbd> + <kbd>Space</kbd> |
+| Display setup  | wdisplays                                                             | <kbd>Super</kbd> + <kbd>D</kbd>     |
+| Audio volume   | pactl                                                                 | <kbd>Super</kbd> + <kbd>0-9</kbd>   |
+| Toggle mute    | pactl                                                                 | <kbd>Super</kbd> + <kbd>Grave</kbd> |
 
 ## NTP
 
