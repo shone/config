@@ -81,9 +81,9 @@ bindsym $alt+Shift+c reload
 #
 # Layout stuff:
 #
-  # make all windows floating
-  for_window [class="[.]*"] floating enable
-  for_window [title="[.]*"] floating enable
+  # make all windows floating and move them to the cursor
+  for_window [class="[.]*"] floating enable, move position cursor
+  for_window [title="[.]*"] floating enable, move position cursor
 
   # Switch the current container between different layout styles
   bindsym $alt+s layout stacking
