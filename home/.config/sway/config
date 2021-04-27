@@ -23,6 +23,9 @@ floating_modifier $alt normal
 bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 for_window [title="^launcher$"] floating enable, border none
 
+# Hide Dolphin titlebars
+for_window [app_id="org.kde.dolphin"] border none
+
 # Wallpaper (solid black background)
 output * bg #000000 solid_color
 
