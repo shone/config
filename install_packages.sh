@@ -5,6 +5,7 @@ BASE_PACKAGES=(
   alacritty               # Terminal (Super+C Sway shortcut)
   wl-clipboard            # Wayland clipboard utilities
   waybar otf-font-awesome # System status indicators + special character font used by waybar
+  mako libnotify          # Notifications. Libnotify required for Firefox.
   qt5-wayland             # For running KDE apps natively in wayland
   xorg-server-xwayland    # Required to run X applications like Chromium, Kate etc. on sway/wayland
   breeze-icons            # Icons for KDE apps (Dolphin, Kate)

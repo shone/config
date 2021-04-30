@@ -131,5 +131,6 @@ bindsym $alt+Shift+c reload
   bindsym $alt+Shift+0 move container to workspace number 10
 
 exec waybar
+exec mako
 
 include /etc/sway/config.d/*
