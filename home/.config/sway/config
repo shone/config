@@ -26,6 +26,9 @@ for_window [title="^launcher$"] floating enable, border none
 # Hide Dolphin titlebars
 for_window [app_id="org.kde.dolphin"] border none
 
+# Hide borders for Chromium, because when Wayland is enabled it won't hide them itself
+for_window [app_id="Chromium"] border none
+
 # Wallpaper (solid black background)
 output * bg #000000 solid_color
 
