@@ -2,7 +2,30 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+
+prompt_command() {
+  # Note: color commands are surrounded with [\...\] to ensure the shell knows how to
+  # calculate the width of the prompt correctly.
+
+  # Change color based on previous command success/failure
+  if [ $? -eq 0 ]; then
+    local background_color='\[\e[48;5;32m\]' # Blue
+  else
+    local background_color='\[\e[48;5;5m\]' # Magenta
+  fi
+
+  local foreground_color='\[\e[38;5;255m\]' # White
+
+  local color_reset='\[\033[m\]'
+
+  local current_directory='\w'
+
+  PS1="$foreground_color$background_color$current_directory \$$color_reset "
+
+  # Set window title to directory name
+  echo -e -n "\033]0;${PWD##*/}\007"
+}
+PROMPT_COMMAND='prompt_command'
 
 # This allows single-click-to-open to work in Dolphin
 # It also causes Firefox to hide the Sway system titlebars, whereas XDG_CURRENT_DESKTOP=sway causes it to show them.
@@ -37,10 +60,6 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=0
 # Fix Android Studio blank screen problem
 # https://wiki.archlinux.org/index.php/Android#Android_Studio
 export _JAVA_AWT_WM_NONREPARENTING=1
-
-# https://github.com/riobard/bash-powerline
-# (with minor modifications)
-source ~/.bash-powerline.sh
 
 # fzf
 # https://github.com/junegunn/fzf
