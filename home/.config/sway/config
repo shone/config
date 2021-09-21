@@ -64,6 +64,7 @@ bindsym $super+Equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $super+Minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $super+Grave exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
+# Super+number to change volume
 bindsym $super+1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
 bindsym $super+2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
 bindsym $super+3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
@@ -74,6 +75,18 @@ bindsym $super+7 exec pactl set-sink-volume @DEFAULT_SINK@ 70%
 bindsym $super+8 exec pactl set-sink-volume @DEFAULT_SINK@ 80%
 bindsym $super+9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
 bindsym $super+0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
+
+# Super+numpad to change volumne
+bindsym $super+KP_1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
+bindsym $super+KP_2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
+bindsym $super+KP_3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
+bindsym $super+KP_4 exec pactl set-sink-volume @DEFAULT_SINK@ 40%
+bindsym $super+KP_5 exec pactl set-sink-volume @DEFAULT_SINK@ 50%
+bindsym $super+KP_6 exec pactl set-sink-volume @DEFAULT_SINK@ 60%
+bindsym $super+KP_7 exec pactl set-sink-volume @DEFAULT_SINK@ 70%
+bindsym $super+KP_8 exec pactl set-sink-volume @DEFAULT_SINK@ 80%
+bindsym $super+KP_9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
+bindsym $super+KP_0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
 
 # exit sway (logs you out of your Wayland session)
 bindsym $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
