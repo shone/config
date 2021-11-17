@@ -1,0 +1,5 @@
+# Allow all Thunderbolt devices to connect without authorization
+# Used for ThinkPad Thunderbolt 4 dock
+# See https://wiki.archlinux.org/title/Thunderbolt#Automatically_connect_any_device
+ACTION=="add", SUBSYSTEM=="thunderbolt", ATTR{authorized}=="0", ATTR{authorized}="1"
+
