@@ -24,7 +24,7 @@ BASE_PACKAGES=(
   pulseaudio
   chromium                # (Super+W Sway shortcut)
   firefox                 # (Super+F Sway shortcut)
-  nomacs okular vlc       # Multimedia viewing
+  nomacs okular mpv       # Multimedia viewing
   slurp                   # Select regions on screen for image/video capture
   grim                    # Screen capture (Super+S Sway shortcut)
   wf-recorder             # Video screen capture (needed for capturing into virtual webcam)
