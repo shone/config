@@ -18,6 +18,8 @@ input * xkb_numlock enable
 # Floating window dragging modifier key
 floating_modifier $alt normal
 
+focus_follows_mouse always
+
 # Application launcher
 # https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
 bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
