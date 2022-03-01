@@ -12,8 +12,10 @@ set $alt Mod1
 # Windows key
 set $super Mod4
 
-# Set numlock
-input * xkb_numlock enable
+input "type:keyboard" {
+  xkb_numlock enable
+  xkb_options caps:none
+}
 
 # Floating window dragging modifier key
 floating_modifier $alt normal
