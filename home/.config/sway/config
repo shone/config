@@ -1,154 +1,193 @@
 # Josh's Sway config
 # Belongs at ~/.config/sway/config
 
+set $alt   Mod1
+set $super Mod4
+
 # For X1 Carbon with two 1080p monitors connected via a dock:
 # Note! If the first output's Y position isn't zero, it seems to mess up the position of all context menus.
-output eDP-1 scale 2 position 0 0
-output 'Eizo Nanao Corporation EV2450 82983055' position 1280 0
-output 'Eizo Nanao Corporation EV2450 76822055' position 3200 0
-
-set $alt Mod1
-
-# Windows key
-set $super Mod4
+output {
+  eDP-1 scale 2 position 0 0
+  'Eizo Nanao Corporation EV2450 82983055' position 1280 0
+  'Eizo Nanao Corporation EV2450 76822055' position 3200 0
+}
 
 input "type:keyboard" {
   xkb_numlock enable
   xkb_options "caps:none,compose:ralt"
 }
 
+# Map Jester touch input to screen
+input '1046:4354:Anapex_Inc._AP8453_Touch' map_to_output 'Acer Technologies EI491CR 0000000000000'
+
 # Floating window dragging modifier key
 floating_modifier $alt normal
 
 focus_follows_mouse always
 
-# Application launcher
-# https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
-bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
-for_window [title="^launcher$"] floating enable, border none
-
-# Hide Dolphin titlebars
-for_window [app_id="org.kde.dolphin"] border none
-
+# Window borders
+for_window [class="[.]*"] border pixel 6
+for_window [title="[.]*"] border pixel 6
 # Hide borders for Chromium, because when Wayland is enabled it won't hide them itself
-for_window [app_id="Chromium"] border none
+for_window [app_id="Chromium"] border csd
 
 # Wallpaper (solid black background)
 output * bg #000000 solid_color
+# Window border/title colors
+client.focused #268bd2 #268bd2 #ffffff
 
 # kill focused window
 bindsym $alt+Shift+q kill
 
-# Main app shortcuts ("super" = Windows key)
-bindsym $super+w exec chromium
-bindsym $super+Shift+w exec chromium --incognito
-bindsym $super+f exec firefox
-bindsym $super+Shift+f exec firefox -private-window
-bindsym $super+e exec dolphin
-bindsym $super+x exec kate
-bindsym $super+c exec alacritty
-bindsym $super+s exec grim -g "$(slurp)" screenshot.png
-bindsym $super+Shift+s exec grim screenshot.png
-bindsym $super+d exec wdisplays
+# Main app shortcuts (super = "Windows" key)
+bindsym {
+  $super+c       exec alacritty
+  $super+e       exec dolphin
+  $super+x       exec kate
+  $super+f       exec firefox
+  $super+Shift+f exec firefox -private-window
+  $super+w       exec chromium
+  $super+Shift+w exec chromium --incognito
+  $super+d       exec wdisplays
+  $super+s       exec grim -g "$(slurp)" screenshot.png
+  $super+Shift+s exec alacritty --title 'Screen capture to video file' -e bash -c 'wf-recorder -g "$(slurp)"'
+}
+
+# Application launcher
+# https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
+bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
+for_window [title="^launcher$"] floating enable, border pixel 6
+
+# WIP - eyedropper from Grim readme examples. Need to pipe to clipboard.
+#bindsym $super+Shift+d exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-
 
 # Shortcut to record the screen into a virtual webcam using https://github.com/umlaeute/v4l2loopback
 # This can work around Zoom or Slack's limited screen capture support on Wayland and Firefox.
 # See also:
 # /etc/modules-load.d/v4l2loopback.conf
 # /etc/modprobe.d/v4l2loopback.conf
-bindsym $super+v exec alacritty --title "Screen capture to virtual webcam" -e bash -c 'wf-recorder --muxer=v4l2 --codec=rawvideo --pixel-format=yuv420p --file=/dev/video2'
+bindsym $super+v exec alacritty --title 'Screen capture virtual webcam' -e bash -c 'wf-recorder --muxer=v4l2 --codec=rawvideo --pixel-format=yuv420p --file=/dev/video2'
 
 # Audio volume keybindings
+bindsym {
+  XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+  XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+  XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+  $super+Equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+  $super+Minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+  $super+Grave exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-bindsym $super+Equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $super+Minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $super+Grave exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+  # Super+number to change volume
+  $super+1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
+  $super+2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
+  $super+3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
+  $super+4 exec pactl set-sink-volume @DEFAULT_SINK@ 40%
+  $super+5 exec pactl set-sink-volume @DEFAULT_SINK@ 50%
+  $super+6 exec pactl set-sink-volume @DEFAULT_SINK@ 60%
+  $super+7 exec pactl set-sink-volume @DEFAULT_SINK@ 70%
+  $super+8 exec pactl set-sink-volume @DEFAULT_SINK@ 80%
+  $super+9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
+  $super+0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
 
-# Super+number to change volume
-bindsym $super+1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
-bindsym $super+2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
-bindsym $super+3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
-bindsym $super+4 exec pactl set-sink-volume @DEFAULT_SINK@ 40%
-bindsym $super+5 exec pactl set-sink-volume @DEFAULT_SINK@ 50%
-bindsym $super+6 exec pactl set-sink-volume @DEFAULT_SINK@ 60%
-bindsym $super+7 exec pactl set-sink-volume @DEFAULT_SINK@ 70%
-bindsym $super+8 exec pactl set-sink-volume @DEFAULT_SINK@ 80%
-bindsym $super+9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
-bindsym $super+0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
+  # Super+numpad to change volumne
+  $super+KP_1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
+  $super+KP_2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
+  $super+KP_3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
+  $super+KP_4 exec pactl set-sink-volume @DEFAULT_SINK@ 40%
+  $super+KP_5 exec pactl set-sink-volume @DEFAULT_SINK@ 50%
+  $super+KP_6 exec pactl set-sink-volume @DEFAULT_SINK@ 60%
+  $super+KP_7 exec pactl set-sink-volume @DEFAULT_SINK@ 70%
+  $super+KP_8 exec pactl set-sink-volume @DEFAULT_SINK@ 80%
+  $super+KP_9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
+  $super+KP_0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
+}
 
-# Super+numpad to change volumne
-bindsym $super+KP_1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
-bindsym $super+KP_2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
-bindsym $super+KP_3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
-bindsym $super+KP_4 exec pactl set-sink-volume @DEFAULT_SINK@ 40%
-bindsym $super+KP_5 exec pactl set-sink-volume @DEFAULT_SINK@ 50%
-bindsym $super+KP_6 exec pactl set-sink-volume @DEFAULT_SINK@ 60%
-bindsym $super+KP_7 exec pactl set-sink-volume @DEFAULT_SINK@ 70%
-bindsym $super+KP_8 exec pactl set-sink-volume @DEFAULT_SINK@ 80%
-bindsym $super+KP_9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
-bindsym $super+KP_0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
+# Sway exit/reload keybindings
+bindsym {
+  # exit sway (logs you out of your Wayland session)
+  $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
 
-# exit sway (logs you out of your Wayland session)
-bindsym $alt+Shift+e exec swaynag -t warning -m 'Exit shortcut pressed. Exit Sway?' -b 'Yes' 'swaymsg exit'
+  # reload the configuration file
+  $alt+Shift+c reload
+}
 
-# reload the configuration file
-bindsym $alt+Shift+c reload
+# make all windows floating
+for_window [class="[.]*"] floating enable, move position cursor
+for_window [title="[.]*"] floating enable, move position cursor
 
-#
-# Layout stuff:
-#
-  # make all windows floating and move them to the cursor
-  for_window [class="[.]*"] floating enable, move position cursor
-  for_window [title="[.]*"] floating enable, move position cursor
-
-  # Switch the current container between different layout styles
-  bindsym $alt+s layout stacking
-  bindsym $alt+w layout tabbed
-  bindsym $alt+e layout toggle split
-
+# Layout keybindings
+bindsym {
   # Make the current focus fullscreen
-  bindsym $alt+f fullscreen
+  $alt+f fullscreen
 
   # Toggle the current focus between tiling and floating mode
-  bindsym $alt+Shift+space floating toggle
+  $alt+Shift+space floating toggle
 
   # Swap focus between the tiling area and the floating area
-  bindsym $alt+space focus mode_toggle
+  $alt+space focus mode_toggle
 
   # move focus to the parent container
   # (Disabed to Zoom keyboard shortcut for toggling mute can work)
-  #bindsym $alt+a focus parent
+  #$alt+a focus parent
 
-#
+  # Switch the current container between different layout styles
+  $alt+s layout stacking
+  $alt+w layout tabbed
+  $alt+e layout toggle split
+}
+
+# Moving around
+bindsym {
+  # Move your focus around
+  $alt+h focus left
+  $alt+j focus down
+  $alt+k focus up
+  $alt+l focus right
+  # Or use $alt+[up|down|left|right]
+  #$alt+Left focus left
+  #$alt+Down focus down
+  #$alt+Up focus up
+  #$alt+Right focus right
+
+  # Move the focused window with the same, but add Shift
+  $alt+Shift+h move left
+  $alt+Shift+j move down
+  $alt+Shift+k move up
+  $alt+Shift+l move right
+  # Ditto, with arrow keys
+  #$alt+Shift+Left move left
+  #$alt+Shift+Down move down
+  #$alt+Shift+Up move up
+  #$alt+Shift+Right move right
+}
+
 # Workspaces:
-#
+bindsym {
   # Switch to workspace
-  bindsym $alt+1 workspace number 1
-  bindsym $alt+2 workspace number 2
-  bindsym $alt+3 workspace number 3
-  bindsym $alt+4 workspace number 4
-  bindsym $alt+5 workspace number 5
-  bindsym $alt+6 workspace number 6
-  bindsym $alt+7 workspace number 7
-  bindsym $alt+8 workspace number 8
-  bindsym $alt+9 workspace number 9
-  bindsym $alt+0 workspace number 10
+  $alt+1 workspace number 1
+  $alt+2 workspace number 2
+  $alt+3 workspace number 3
+  $alt+4 workspace number 4
+  $alt+5 workspace number 5
+  $alt+6 workspace number 6
+  $alt+7 workspace number 7
+  $alt+8 workspace number 8
+  $alt+9 workspace number 9
+  $alt+0 workspace number 10
 
   # Move focused container to workspace
-  bindsym $alt+Shift+1 move container to workspace number 1
-  bindsym $alt+Shift+2 move container to workspace number 2
-  bindsym $alt+Shift+3 move container to workspace number 3
-  bindsym $alt+Shift+4 move container to workspace number 4
-  bindsym $alt+Shift+5 move container to workspace number 5
-  bindsym $alt+Shift+6 move container to workspace number 6
-  bindsym $alt+Shift+7 move container to workspace number 7
-  bindsym $alt+Shift+8 move container to workspace number 8
-  bindsym $alt+Shift+9 move container to workspace number 9
-  bindsym $alt+Shift+0 move container to workspace number 10
+  $alt+Shift+1 move container to workspace number 1
+  $alt+Shift+2 move container to workspace number 2
+  $alt+Shift+3 move container to workspace number 3
+  $alt+Shift+4 move container to workspace number 4
+  $alt+Shift+5 move container to workspace number 5
+  $alt+Shift+6 move container to workspace number 6
+  $alt+Shift+7 move container to workspace number 7
+  $alt+Shift+8 move container to workspace number 8
+  $alt+Shift+9 move container to workspace number 9
+  $alt+Shift+0 move container to workspace number 10
+}
 
 exec waybar
 exec mako
