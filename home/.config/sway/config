@@ -51,15 +51,13 @@ bindsym {
   $super+d       exec wdisplays
   $super+s       exec grim -g "$(slurp)" screenshot.png
   $super+Shift+s exec alacritty --title 'Screen capture to video file' -e bash -c 'wf-recorder -g "$(slurp)"'
+  $super+g       exec wl-copy $(grim -g "$(slurp -p)" -t ppm - | convert - -format '%[hex:p{0,0}]' info:-)
 }
 
 # Application launcher
 # https://www.reddit.com/r/swaywm/comments/b0svce/wayland_native_application_launcher/eihubk0/
 bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 for_window [title="^launcher$"] floating enable, border pixel 6
-
-# WIP - eyedropper from Grim readme examples. Need to pipe to clipboard.
-#bindsym $super+Shift+d exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:-
 
 # Shortcut to record the screen into a virtual webcam using https://github.com/umlaeute/v4l2loopback
 # This can work around Zoom or Slack's limited screen capture support on Wayland and Firefox.
