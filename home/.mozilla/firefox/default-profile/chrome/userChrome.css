@@ -1,0 +1,6 @@
+/* See https://www.userchrome.org/how-create-userchrome-css.html */
+
+/* Disable transition animation of the tab-bar when entering fullscreen */
+#navigator-toolbox[fullscreenShouldAnimate] {
+  transition: none !important;
+}
