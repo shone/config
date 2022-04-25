@@ -30,6 +30,7 @@ BASE_PACKAGES=(
   wf-recorder             # Video screen capture (needed for capturing into virtual webcam)
   v4l2loopback-dkms       # For doing virtual webcams. (Super+V for capturing screen into virtual webcam).
   inkscape krita          # Image editing
+  speedcrunch             # calculator
 )
 
 sudo pacman -S "${BASE_PACKAGES[@]}"
