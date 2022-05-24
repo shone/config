@@ -52,6 +52,7 @@ bindsym {
   $super+s       exec grim -g "$(slurp)" screenshot.png
   $super+Shift+s exec alacritty --title 'Screen capture to video file' -e bash -c 'wf-recorder -g "$(slurp)"'
   $super+g       exec wl-copy $(grim -g "$(slurp -p)" -t ppm - | convert - -format '%[hex:p{0,0}]' info:-)
+  $super+z       exec speedcrunch
 }
 
 # Application launcher
