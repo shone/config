@@ -4,3 +4,6 @@
 #navigator-toolbox[fullscreenShouldAnimate] {
   transition: none !important;
 }
+
+/* Prevent tab-bar from opening in fullscreen mode when cursor is moved to top of screen */
+#fullscr-toggler { display:none !important; }
