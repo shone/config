@@ -131,9 +131,9 @@ bindsym {
   #$alt+a focus parent
 
   # Switch the current container between different layout styles
-  $alt+s layout stacking
-  $alt+w layout tabbed
-  $alt+e layout toggle split
+  #$alt+s layout stacking
+  #$alt+w layout tabbed
+  #$alt+e layout toggle split
 }
 
 # Moving around
