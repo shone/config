@@ -161,6 +161,9 @@ bindsym {
   #$alt+Shift+Right move right
 }
 
+# Move the cursor to the center of each window when it's focused
+mouse_warping container
+
 # Workspaces:
 bindsym {
   # Switch to workspace
