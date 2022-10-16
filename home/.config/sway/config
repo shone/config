@@ -60,13 +60,6 @@ bindsym {
 bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 for_window [title="^launcher$"] floating enable, border pixel 6
 
-# Shortcut to record the screen into a virtual webcam using https://github.com/umlaeute/v4l2loopback
-# This can work around Zoom or Slack's limited screen capture support on Wayland and Firefox.
-# See also:
-# /etc/modules-load.d/v4l2loopback.conf
-# /etc/modprobe.d/v4l2loopback.conf
-bindsym $super+v exec alacritty --title 'Screen capture virtual webcam' -e bash -c 'wf-recorder --muxer=v4l2 --codec=rawvideo --pixel-format=yuv420p --file=/dev/video2'
-
 # Audio volume keybindings
 bindsym {
   XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
