@@ -29,6 +29,7 @@ BASE_PACKAGES=(
   wf-recorder             # Video screen capture
   inkscape krita          # Image editing
   speedcrunch             # calculator
+  vulkan-icd-loader vulkan-intel # Vulkan rendering API (https://wiki.archlinux.org/title/Vulkan#Installation)
 )
 
 sudo pacman -S "${BASE_PACKAGES[@]}"
