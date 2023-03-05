@@ -141,6 +141,11 @@ bindsym {
   #$alt+Down focus down
   #$alt+Up focus up
   #$alt+Right focus right
+  # Or use $alt+[w|a|s|d]
+  $alt+a focus left
+  $alt+s focus down
+  $alt+w focus up
+  $alt+d focus right
 
   # Move the focused window with the same, but add Shift
   $alt+Shift+h move left
