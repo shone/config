@@ -157,6 +157,11 @@ bindsym {
   #$alt+Shift+Down move down
   #$alt+Shift+Up move up
   #$alt+Shift+Right move right
+  # Ditto, with WASD
+  $alt+Shift+a move left
+  $alt+Shift+s move down
+  $alt+Shift+w move up
+  $alt+Shift+d move right
 }
 
 # Move the cursor to the center of each window when it's focused
