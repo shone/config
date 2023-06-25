@@ -41,28 +41,3 @@ cp yay_pkgbuild/PKGBUILD yay/
 cd yay
 makepkg -si # Assumes base-devel package is already installed
 ```
-
-## Fan control (for ThinkPads)
-
-This used to be necessary as the fan wouldn't activate at all and the CPU would quickly shut down while under load, but after a recent reinstallation of Arch Linux on a ThinkPad X1 Carbon 7th Gen, the fan activated itself without simpfand or any other fan configuration.
-
-- https://wiki.archlinux.org/index.php/Fan_speed_control#ThinkPad_laptops
-- https://github.com/hspak/simpfand
-```bash
-su
-echo options thinkpad_acpi fan_control=1 > /etc/modprobe.d/thinkpad_fan.conf
-exit
-yay -S simpfand-git
-systemctl enable simpfand
-systemctl start simpfand
-# Check that fan control is working:
-sensors
-```
-
-## Dynamically set Alacritty window title
-
-With `window.dynamic_title` in `~/.config/alacritty/alacritty.yml` set to true:
-
-```bash
-echo -e "\033]0;my-window-title\007"
-```
