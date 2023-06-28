@@ -23,10 +23,9 @@
   },
   "network": {
     "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr} ",
-    "format-disconnected": "Disconnected ⚠"
-    // Copy IP address to clipboard on click
-    //"on-click": "wl-copy $(ip -4 addr show enp2s0 | grep -oP '(?<=inet\\s)\\d+(\\.\\d+){3}')"
+    "format-ethernet": "{ifname} {ipaddr} ",
+    "format-disconnected": "Disconnected ⚠",
+    "on-click": "nm-connection-editor"
   },
   "pulseaudio": {
     "scroll-step": 1,
