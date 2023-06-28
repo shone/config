@@ -2,6 +2,12 @@
 
 This repository contains my personal configuration files for various tools and applications, such as [Sway](https://swaywm.org/), [Dolphin](https://github.com/KDE/dolphin), [Inkscape](https://inkscape.org/), [Alacritty](https://github.com/jwilm/alacritty) etc, and also linux system configuration like automatic login and fan control.
 
+| | |
+|-|-|
+| OS | [Arch Linux](https://archlinux.org/) |
+| Desktop environment | [Sway](https://swaywm.org/) |
+| Hardware | ThinkPad X1 Carbon 7th gen |
+
 ## Keyboard Shortcuts
 
 The [sway config](home/.config/sway/config) has keyboard shortcuts for several core apps/tools:
