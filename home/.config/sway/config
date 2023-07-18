@@ -66,13 +66,10 @@ bindsym {
   XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
   XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
-  $super+Equal exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-  $super+Minus exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-  $super+Grave exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-  # Volume up/down with alt+[f1|f2]
-  $alt+f1 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-  $alt+f2 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+  # Match Fn keys on Thinkpad
+  $alt+f1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+  $alt+f2 exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+  $alt+f3 exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
   # Super+number to change volume
   $super+1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
@@ -86,7 +83,7 @@ bindsym {
   $super+9 exec pactl set-sink-volume @DEFAULT_SINK@ 90%
   $super+0 exec pactl set-sink-volume @DEFAULT_SINK@ 100%
 
-  # Super+numpad to change volumne
+  # Super+numpad to change volume
   $super+KP_1 exec pactl set-sink-volume @DEFAULT_SINK@ 10%
   $super+KP_2 exec pactl set-sink-volume @DEFAULT_SINK@ 20%
   $super+KP_3 exec pactl set-sink-volume @DEFAULT_SINK@ 30%
