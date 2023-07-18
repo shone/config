@@ -17,9 +17,6 @@ input "type:keyboard" {
   xkb_options "caps:none,compose:ralt"
 }
 
-# Map Jester touch input to screen
-input '1046:4354:Anapex_Inc._AP8453_Touch' map_to_output 'Acer Technologies EI491CR 0000000000000'
-
 # Floating window dragging modifier key
 floating_modifier $alt normal
 
