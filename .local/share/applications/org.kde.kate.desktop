@@ -1,0 +1,4 @@
+[Desktop Entry]
+# Open Kate with --new, so a new window is always opened
+# See https://docs.kde.org/stable5/en/applications/kate/fundamentals.html#starting-from-the-command-line
+Exec=kate --new %U
