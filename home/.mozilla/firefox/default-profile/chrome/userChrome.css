@@ -7,3 +7,6 @@
 
 /* Prevent tab-bar from opening in fullscreen mode when cursor is moved to top of screen */
 #fullscr-toggler { display:none !important; }
+
+/* Hide HTTP status panel that sometimes appears in the bottom left */
+#statuspanel {display:none !important;}
