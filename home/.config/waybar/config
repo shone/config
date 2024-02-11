@@ -1,57 +1,64 @@
 [{
-  // For all monitors except the laptop display:
-  "output": "!eDP-1",
+	// For all monitors except the laptop display:
+	"output": "!eDP-1",
 
-  "position": "top",
-  "layer": "bottom", // Appear beneath other windows
-  "height": 30,
+	"position": "top",
+	"layer": "bottom", // Appear beneath other windows
+	"height": 30,
 
-  "modules-left": ["sway/workspaces"]
+	"modules-left": ["sway/workspaces"],
+	"modules-right": ["clock"],
+
+	"clock": {
+		"format": "{:%H:%M %a %d.%m.%Y}",
+		"on-click": "wl-copy \"$(date '+%H:%M %a %d.%m.%Y')\""
+	}
 }, {
-  // For the laptop display:
-  "output": "eDP-1",
+	// For the laptop display:
+	"output": "eDP-1",
 
-  "position": "top",
-  "layer": "bottom", // Appear beneath other windows
-  "height": 30,
+	"position": "top",
+	"layer": "bottom", // Appear beneath other windows
+	"height": 30,
 
-  "modules-left": ["sway/workspaces"],
-  "modules-right": ["pulseaudio", "network", "battery", "clock"],
+	"modules-left": ["sway/workspaces"],
+	"modules-right": ["pulseaudio", "network", "battery", "clock"],
 
-  "clock": {
-    "format": "{:%d.%m.%Y | %a | %H:%M}"
-  },
-  "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ifname} {ipaddr} ",
-    "format-disconnected": "Disconnected ⚠",
-    "on-click": "nm-connection-editor"
-  },
-  "pulseaudio": {
-    "scroll-step": 1,
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-muted": "",
-    "format-icons": {
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "default": ["", ""]
-    },
-    "on-click": "alacritty -e alsamixer"
-  },
-  "battery": {
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{capacity}% {icon}",
-    "format-icons": ["", "", "", "", ""]
-  },
-  "sway/workspaces": {
-    "disable-scroll": true,
-    "format": "{name}"
-  }
+	"clock": {
+		"format": "{:%H:%M %a %d.%m.%Y}",
+		"on-click": "wl-copy \"$(date '+%H:%M %a %d.%m.%Y')\""
+	},
+	"network": {
+		"format-wifi": "{essid} ",
+		"format-ethernet": "{ifname} | {ipaddr} ",
+		"format-disconnected": "Disconnected ⚠",
+		"on-click": "nm-connection-editor"
+	},
+	"pulseaudio": {
+		"scroll-step": 1,
+		"format": "{volume}% {icon}",
+		"format-bluetooth": "{volume}% {icon}",
+		"format-muted": "",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"default": ["", ""]
+		},
+		"on-click": "alacritty -e alsamixer"
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""]
+	},
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"format": "{name}"
+	}
 }]
