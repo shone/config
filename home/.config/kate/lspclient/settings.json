@@ -1,0 +1,10 @@
+{
+    "servers": {
+        "javascript": {
+            "command": ["typescript-language-server", "--stdio"],
+            "rootIndicationFileNames": ["index.html", "main.mjs"],
+            "url": "https://github.com/theia-ide/typescript-language-server",
+            "highlightingModeRegex": "^JavaScript.*$"
+        }
+    }
+}
