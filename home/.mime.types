@@ -1,0 +1,4 @@
+# Let Firefox try to open markdown directly from the filesystem (file:// protocol), rather than prompting for a download. This is
+# so it may be opened with the markdown-viewer Firefox extension.
+# See https://github.com/Cimbali/markdown-viewer/blob/master/README.md#support-for-local-files-on-linux-and-macos
+type=text/plain exts=md,mkd,mkdn,mdwn,mdown,markdown, desc="Markdown document"
