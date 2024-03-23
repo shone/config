@@ -10,8 +10,8 @@
 	"modules-right": ["clock"],
 
 	"clock": {
-		"format": "{:%H:%M %a %d.%m.%Y}",
-		"on-click": "wl-copy \"$(date '+%H:%M %a %d.%m.%Y')\""
+		"format": "{:%d.%m.%Y %a %H:%M}",
+		"on-click": "wl-copy \"$(date '+%d.%m.%Y %a %H:%M')\""
 	}
 }, {
 	// For the laptop display:
@@ -25,8 +25,8 @@
 	"modules-right": ["pulseaudio", "network", "battery", "clock"],
 
 	"clock": {
-		"format": "{:%H:%M %a %d.%m.%Y}",
-		"on-click": "wl-copy \"$(date '+%H:%M %a %d.%m.%Y')\""
+		"format": "{:%d.%m.%Y %a %H:%M}",
+		"on-click": "wl-copy \"$(date '+%d.%m.%Y %a %H:%M')\""
 	},
 	"network": {
 		"format-wifi": "{essid} ",
