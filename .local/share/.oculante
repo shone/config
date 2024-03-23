@@ -1,0 +1,20 @@
+{
+  "vsync": true,
+  "keep_view": false,
+  "show_scrub_bar": false,
+  "wrap_folder": false,
+  "keep_edits": false,
+  "title_format": "{APP} | {VERSION} | {FULLPATH}",
+  "info_enabled": false,
+  "edit_enabled": false,
+  "show_checker_background": false,
+  "show_minimap": false,
+  "show_frame": false,
+  "current_channel": "Rgba",
+  "svg_scale": 1.0,
+  "zen_mode": true,
+  "theme": "Dark",
+  "linear_mag_filter": false,
+  "fit_image_on_window_resize": true,
+  "zoom_multiplier": 0.3
+}
