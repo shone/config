@@ -11,6 +11,7 @@ BASE_PACKAGES=(
   kate                    # Text editor (Super+X Sway shortcut)
   dolphin dolphin-plugins # File browser (Super+E Sway shortcut)
   packagekit-qt5          # This was required to install the Meld menu service inside Dolphin
+  udiskie                 # Auto-mount USB drives etc.
   filelight               # For visualizing disk usage
   git
   go                      # The Go programming language

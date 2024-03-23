@@ -1,0 +1,9 @@
+[Unit]
+Description=udiskie mounts drives when plugged in
+
+[Service]
+# ExecStart=/usr/bin/udiskie --no-notify
+ExecStart=/usr/bin/udiskie
+
+[Install]
+WantedBy=default.target
