@@ -15,6 +15,7 @@ BASE_PACKAGES=(
   git
   go                      # The Go programming language
   meld                    # File comparison
+  difftastic              # CLI file comparison
   ripgrep                 # File searching
   jq                      # JSON manipulation
   zip unzip

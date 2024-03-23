@@ -5,10 +5,17 @@
 # Set Kate as editor for commit messages, rebase commands etc.
 # --block option required to make git wait for Kate to close.
 # Set QT_LOGGING_RULES to prevent a bunch of warnings about spellcheck.
-	excludesfile = /home/josh/.config/.gitignore
 	editor = QT_LOGGING_RULES="*=false" kate --block --new
+	excludesfile = /home/josh/.config/.gitignore
 [diff]
-	tool = meld # Used by git difftool command
+	external = difft
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+	difftool = true
 [pull]
 	ff = only # Prevents warning introduced in Git 2.27
 [init]
