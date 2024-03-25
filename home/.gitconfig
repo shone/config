@@ -8,12 +8,14 @@
 	editor = QT_LOGGING_RULES="*=false" kate --block --new
 	excludesfile = /home/josh/.config/.gitignore
 [diff]
-	external = difft
+	# Fix difftastic green text on Solarized dark theme by passing --background=light
+	# See https://github.com/Wilfred/difftastic/issues/611#issuecomment-2013503003
+	external = difft --background=light
 	tool = difftastic
 [difftool]
 	prompt = false
 [difftool "difftastic"]
-	cmd = difft "$LOCAL" "$REMOTE"
+	cmd = difft --background=light "$LOCAL" "$REMOTE"
 [pager]
 	difftool = true
 [pull]
