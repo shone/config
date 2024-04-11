@@ -1,5 +1,5 @@
 AUR_PACKAGES=(
-  spotify
+  spotify   # Super+M keyboard shortcut
   wdisplays # Graphical monitor setup (Super+D Sway shortcut)
 )
 
