@@ -128,18 +128,8 @@ bindsym {
   #$alt+e layout toggle split
 }
 
-# Moving around
+# Moving focus around
 bindsym {
-  # Move your focus around
-  $alt+h focus left
-  $alt+j focus down
-  $alt+k focus up
-  $alt+l focus right
-  # Or use $alt+[up|down|left|right]
-  #$alt+Left focus left
-  #$alt+Down focus down
-  #$alt+Up focus up
-  #$alt+Right focus right
   # Or use $alt+[w|a|s|d]
   $alt+a focus left
   $alt+s focus down
@@ -147,16 +137,6 @@ bindsym {
   $alt+d focus right
 
   # Move the focused window with the same, but add Shift
-  $alt+Shift+h move left
-  $alt+Shift+j move down
-  $alt+Shift+k move up
-  $alt+Shift+l move right
-  # Ditto, with arrow keys
-  #$alt+Shift+Left move left
-  #$alt+Shift+Down move down
-  #$alt+Shift+Up move up
-  #$alt+Shift+Right move right
-  # Ditto, with WASD
   $alt+Shift+a move left
   $alt+Shift+s move down
   $alt+Shift+w move up
