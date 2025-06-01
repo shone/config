@@ -51,6 +51,7 @@ bindsym {
   $super+g       exec wl-copy $(grim -g "$(slurp -p)" -t ppm - | convert - -format '%[hex:p{0,0}]' info:-)
   $super+z       exec speedcrunch
   $super+m       exec spotify
+  $super+t       exec zeditor --new ~/todo.md
 }
 
 # Application launcher
