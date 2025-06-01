@@ -7,7 +7,7 @@ set $super Mod4
 # For X1 Carbon with two 1080p monitors connected via a dock:
 # Note! If the first output's Y position isn't zero, it seems to mess up the position of all context menus.
 output {
-  eDP-1 scale 2 position 0 0
+  eDP-1 scale 1.5 position 0 0
   'Eizo Nanao Corporation EV2450 82983055' position 1280 0
   'Eizo Nanao Corporation EV2450 76822055' position 3200 0
 }
