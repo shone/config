@@ -40,7 +40,7 @@ bindsym $alt+Shift+q kill
 bindsym {
   $super+c       exec alacritty
   $super+e       exec dolphin
-  $super+x       exec kate
+  $super+x       exec zeditor --new
   $super+f       exec firefox
   $super+Shift+f exec firefox -private-window
   $super+w       exec chromium

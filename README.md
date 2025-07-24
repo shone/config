@@ -15,7 +15,7 @@ This repository contains my personal configuration files for various tools and a
 | Type           | Name                                                                  | Keyboard shortcut                              |
 | -              | -                                                                     | -                                              |
 | Terminal       | [Alacritty](https://github.com/alacritty/alacritty)                   | <kbd>Super</kbd> <kbd>C</kbd>                  |
-| Text editor    | [Kate](https://kate-editor.org/)                                      | <kbd>Super</kbd> <kbd>X</kbd>                  |
+| Text editor    | [Zed](https://zed.dev/)                                               | <kbd>Super</kbd> <kbd>X</kbd>                  |
 | File browser   | [Dolphin](https://kde.org/applications/system/org.kde.dolphin)        | <kbd>Super</kbd> <kbd>E</kbd>                  |
 | Firefox        | [Firefox](https://www.mozilla.org/en-US/firefox/)                     | <kbd>Super</kbd> <kbd>F</kbd>                  |
 | Chromium       | [Chromium](https://www.archlinux.org/packages/extra/x86_64/chromium/) | <kbd>Super</kbd> <kbd>W</kbd>                  |

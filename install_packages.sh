@@ -8,7 +8,7 @@ BASE_PACKAGES=(
   qt5-wayland                    # For running KDE apps natively in wayland
   xorg-server-xwayland           # Required to run X applications on sway/wayland
   breeze-icons                   # Icons for KDE apps (Dolphin, Kate)
-  kate                           # Text editor (Super+X Sway shortcut)
+  zed                            # Text editor (Super+X Sway shortcut)
   dolphin dolphin-plugins        # File browser (Super+E Sway shortcut)
   packagekit-qt5                 # This was required to install the Meld menu service inside Dolphin
   udiskie                        # Auto-mount USB drives etc.
