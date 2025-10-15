@@ -2,7 +2,7 @@
 	email = josh.shone@gmail.com
 	name = Josh Shone
 [core]
-	editor = QT_LOGGING_RULES="*=false" kate --block --new # block option required to make git wait for Kate to close
+	editor = zeditor --new --wait
 	excludesfile = /home/josh/.config/.gitignore
 [diff]
 	# Fix difftastic green text on Solarized dark theme by passing --background=light
