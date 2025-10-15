@@ -2,10 +2,7 @@
 	email = josh.shone@gmail.com
 	name = Josh Shone
 [core]
-# Set Kate as editor for commit messages, rebase commands etc.
-# --block option required to make git wait for Kate to close.
-# Set QT_LOGGING_RULES to prevent a bunch of warnings about spellcheck.
-	editor = QT_LOGGING_RULES="*=false" kate --block --new
+	editor = QT_LOGGING_RULES="*=false" kate --block --new # block option required to make git wait for Kate to close
 	excludesfile = /home/josh/.config/.gitignore
 [diff]
 	# Fix difftastic green text on Solarized dark theme by passing --background=light
@@ -22,3 +19,11 @@
 	ff = only # Prevents warning introduced in Git 2.27
 [init]
 	defaultBranch = master
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L

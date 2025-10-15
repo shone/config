@@ -34,6 +34,7 @@ BASE_PACKAGES=(
   speedcrunch                    # calculator
   vulkan-icd-loader vulkan-intel # Vulkan rendering API (https://wiki.archlinux.org/title/Vulkan#Installation)
   typescript-language-server     # For Javascript LSP support in Kate (jump-to-definition etc.)
+  mergiraf                       # Syntax-aware Git merging
 )
 
 sudo pacman -S "${BASE_PACKAGES[@]}"
