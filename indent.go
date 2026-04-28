@@ -1,4 +1,4 @@
-// Overwrites the given file, replacing every multiple of two spaces at the start of each line with tab characters.
+// Overwrites the given file, replacing every multiple of four spaces at the start of each line with tab characters.
 //
 // Usage:
 // $ indent path/to/file.txt
@@ -35,8 +35,9 @@ func main() {
 			for spaceCount<len(text) && text[spaceCount] == ' ' {
 				spaceCount++
 			}
-			if spaceCount > 0 && spaceCount % 2 == 0 {
-				for i:=0; i<spaceCount/2; i++ {
+			if spaceCount > 0 && spaceCount % 4 == 0 {
+				tabCount := spaceCount / 4
+				for range tabCount {
 					output.WriteString("\t")
 				}
 			}
