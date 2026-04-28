@@ -46,7 +46,7 @@ bindsym {
   $super+w       exec chromium
   $super+Shift+w exec chromium --incognito
   $super+d       exec wdisplays
-  $super+s       exec grim -g "$(slurp)" screenshot.png
+  $super+s       exec grim -g "$(slurp -d)" screenshots/$(date +"%Y-%m-%dT%H:%M:%S").png
   $super+Shift+s exec alacritty --title 'Screen capture to video file' -e bash -c 'wf-recorder -g "$(slurp)"'
   $super+g       exec wl-copy $(grim -g "$(slurp -p)" -t ppm - | convert - -format '%[hex:p{0,0}]' info:-)
   $super+z       exec speedcrunch
@@ -59,7 +59,18 @@ bindsym {
 bindsym $super+space exec alacritty --title=launcher -e bash -c 'compgen -c | sort -u | fzf | xargs -r swaymsg -t command exec'
 for_window [title="^launcher$"] floating enable, border pixel 6
 
-# Audio volume keybindings
+# Audio keybindings
+bindsym --locked {
+  XF86AudioPlay exec playerctl play-pause
+  XF86AudioPause exec playerctl play-pause
+  XF86AudioPrev exec playerctl previous
+  XF86AudioNext exec playerctl next
+  XF86AudioStop exec playerctl stop
+
+  $super+Shift+space exec playerctl play-pause
+  $super+Shift+Left exec playerctl previous
+  $super+Shift+Right exec playerctl next
+}
 bindsym {
   XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
   XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
