@@ -27,6 +27,7 @@ BASE_PACKAGES=(
   firefox                        # (Super+F Sway shortcut)
   chromium                       # (Super+W Sway shortcut)
   oculante okular mpv            # Multimedia viewing
+  wdisplays                      # Graphical monitor setup (Super+D Sway shortcut)
   slurp                          # Select regions on screen for image/video capture
   grim                           # Screen capture (Super+S Sway shortcut)
   wf-recorder                    # Video screen capture
